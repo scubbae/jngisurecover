@@ -15,7 +15,10 @@ class CreateContentsTable extends Migration
     {
         Schema::create('contents', function (Blueprint $table) {
             $table->id();
-            $table->string('file');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('branch');
+            $table->longText('file');
             $table->string('user_id');
             $table->timestamps();
         });

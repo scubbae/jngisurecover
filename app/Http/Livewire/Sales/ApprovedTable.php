@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Agents;
+namespace App\Http\Livewire\Sales;
 
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
@@ -9,10 +9,10 @@ use App\Models\Content;
 class ApprovedTable extends Component
 {
     public $fileData;
-    
+
     public $fileDetails = [];
-    
-    
+
+
     public function detail($id)
     {
         $this->fileData = Content::find($id);
@@ -23,10 +23,10 @@ class ApprovedTable extends Component
     }
     public function render()
     {
-        $agent_id = session('$agent_id');
-        
+        $agent_id = session('$sales_id');
+
         $approveds = DB::table('approveds')->where('user_id', $agent_id)->get();
-        
-        return view('livewire.agents.approved-table', ['approveds'=>$approveds]);
+
+        return view('livewire.sales.approved-table', ['approveds'=>$approveds]);
     }
 }

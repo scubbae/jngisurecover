@@ -1,4 +1,4 @@
-@extends('layouts.sales.app')
+@extends('layouts.agents.app')
 @section('title', 'Dashboard')
 
 @section('content')
@@ -16,17 +16,6 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <div class="card card-body mb-3">
-                <h5 class="mb-3">Complete Documents</h5>
-
-            </div>
-            <div class="card card-body">
-                <h5 class="mb-3">Processing</h5>
-
-            </div>
-        </div>
-    </div>
+   <livewire:agents.documents-table />
 
 @endsection

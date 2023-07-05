@@ -1,10 +1,10 @@
-@extends('layouts.agent.app')
+@extends('layouts.sales.app')
 @section('title', 'Archive')
 
 @section('content')
 
      <div class="container-fluid">
-        <livewire:agents.archive-table />
+        <livewire:sales.archive-table />
     </div>
-    
+
 @endsection

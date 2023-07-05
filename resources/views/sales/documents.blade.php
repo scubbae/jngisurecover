@@ -1,10 +1,10 @@
-@extends('layouts.agent.app')
+@extends('layouts.sales.app')
 @section('title', 'Dashboard')
 
 @section('content')
 
      <div class="container-fluid">
-        <livewire:agents.document-table />
+        <livewire:sales.document-table />
     </div>
-    
+
 @endsection

@@ -24,10 +24,12 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/agent', [AgentController::class, 'index']);
-Route::get('/agent/upload', [AgentController::class, 'upload']);
-Route::get('/agent/documents', [AgentController::class, 'document']);
-Route::get('/agent/archives', [AgentController::class, 'archive']);
-Route::get('/agent/logout', [AgentController::class, 'logout']);
-
+//Sales team
 Route::get('/sales', [SalesController::class, 'index']);
+Route::get('/sales/upload', [SalesController::class, 'upload']);
+Route::get('/sales/documents', [SalesController::class, 'document']);
+Route::get('/sales/documents/{id}', [SalesController::class, 'single']);
+Route::get('/sales/archives', [SalesController::class, 'archive']);
+Route::get('/sales/logout', [SalesController::class, 'logout']);
+//JNGI Agents
+Route::get('/agents', [AgentController::class, 'index']);

@@ -7,7 +7,7 @@
     @endforeach
 </div>
 <div class="mt-3">
-    <a class="btn btn-outline-primary" href="/agent/archives">View All</a>
+    <a class="btn btn-outline-primary" href="/sales/archives">View All</a>
 </div>
 </div>
 </div>

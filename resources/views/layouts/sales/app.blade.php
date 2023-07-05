@@ -16,40 +16,40 @@
     @livewireStyles
   </head>
   <body>
-      
+
      <div class="container-fluid bg-light" style="min-height:100vh;">
-         <header class="py-2 sticky-top">
+         <header class="py-2">
             <nav class="navbar bg-body-tertiary">
               <div class="container-fluid">
                 <a class="navbar-brand">Document Portal</a>
-                
+
                 <x-top-nav />
-                
-                
+
+
                 <div class="btn-group">
                   <a href="#" class="btn btn-outline-secondary">
                     <i class="bi bi-person-fill-gear" style="font-size:1rem;"></i> Profile
                   </a>
-                  
+
                   <a href="/agent/logout" class="btn btn-outline-secondary">
                     <i class="bi bi-person-fill-x" style="font-size:1rem;"></i> Logout
                   </a>
                 </div>
-                
+
               </div>
             </nav>
          </header>
          <div class="content pt-5">
 
-                <x-alerts />
-                
+                <div class="container"><x-alerts /></div>
+
                 @yield('content')
-                
+
          </div>
      </div>
-     
+
      @livewireScripts
-      
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script>
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')

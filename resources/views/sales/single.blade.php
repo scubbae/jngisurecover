@@ -1,10 +1,10 @@
-@extends('layouts.agent.app')
+@extends('layouts.sales.app')
 @section('title', 'Document')
 
 @section('content')
 
      <div class="container-fluid">
-        <livewire:agents.document />
+        <livewire:sales.document :file_id="$id"/>
     </div>
-    
+
 @endsection

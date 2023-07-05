@@ -1,8 +1,8 @@
-@extends('layouts.agent.app')
+@extends('layouts.sales.app')
 @section('title', 'Document Upload')
 
 @section('content')
     <div class="container">
-        <livewire:agents.upload />
+        <livewire:sales.upload />
     </div>
 @endsection

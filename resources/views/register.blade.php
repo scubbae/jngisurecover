@@ -9,26 +9,23 @@
     @livewireStyles
   </head>
   <body>
-<section class="py-5">
-<div class="container">
-    <div class="row">
-        <div class="col d-none d-md-block left text-center">
-            <header>
-                <img width="150px" src="https://www.jngijamaica.com/wp-content/uploads/2019/07/cropped-cropped-JNGI-Logo.png">
-                <h1>Document Portal</h1>
-                <lottie-player class="mx-auto" src="https://assets9.lottiefiles.com/packages/lf20_JNfP0LIyMH.json"  background="transparent"  speed="1"  style="width: 520px; height:520px"  loop  autoplay></lottie-player>
-            </header>
-        </div>
-        <div class="col-4 right">
-            <livewire:register />
+<header class="bg-light py-5">
+    <div class="container">
+        <div class="text-center">
+            <img width="150px" src="https://www.jngijamaica.com/wp-content/uploads/2019/07/cropped-cropped-JNGI-Logo.png">
+            <h1>Document Portal</h1>
         </div>
     </div>
-</div>
+</header>
+<section class="py-5">
+    <div class="container col-md-3">
+        <x-alerts />
+        <livewire:register />
+    </div>
 </section>
 
-    
     @livewireScripts
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
