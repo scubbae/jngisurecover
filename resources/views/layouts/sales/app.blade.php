@@ -31,7 +31,7 @@
                     <i class="bi bi-person-fill-gear" style="font-size:1rem;"></i> Profile
                   </a>
 
-                  <a href="/agent/logout" class="btn btn-outline-secondary">
+                  <a href="/logout" class="btn btn-outline-secondary">
                     <i class="bi bi-person-fill-x" style="font-size:1rem;"></i> Logout
                   </a>
                 </div>

@@ -13,4 +13,9 @@ class AgentController extends Controller
     {
         return view('agents.index');
     }
+    public function logout()
+    {
+        session()->forget('login_id');
+        return redirect('/');
+    }
 }

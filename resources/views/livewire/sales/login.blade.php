@@ -18,7 +18,7 @@
                 <input class="form-control" type="password" wire:model="password" placeholder="Password" />
             </div>
             <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="salesLoginCheck" wire:model="remember">
+              <input class="form-check-input" type="checkbox" value="" id="salesLoginCheck" wire:model="salesLoginCheck">
               <label class="form-check-label" for="salesLoginCheck">
                 Remember me
               </label>

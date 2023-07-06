@@ -13,7 +13,7 @@ class Login extends Component
 {
     public $email;
     public $password;
-    public $remember;
+    public $salesLoginCheck;
 
     protected $rules = [
             'email' => 'required|email',
@@ -31,7 +31,7 @@ class Login extends Component
             session()->put('sales', $user->first_name);
             session()->put('login', $user->updated_at);
 
-            if ($this->remember) {
+            if ($this->salesLoginCheck) {
                 $rememberToken = Str::random(60);
                 DB::table('sales')
                     ->where('id', $user->id)

@@ -13,38 +13,28 @@ class DocumentsTable extends Component
 {
     use WithFileUploads;
     use WithPagination;
+
     protected $paginationTheme = 'bootstrap';
 
-    public $file_url;
-    public $file_name;
-    public $file_id;
-    public $fileData;
-    public $agent_id;
-    public $file;
 
     public $searchInput;
     public $searchQuery;
 
-    public $layout = 'grid';
-
-    public $select_id = array();
-
     public $status;
     public $comment;
+    public $file;
+    public $fileDetail;
 
-    public function list_layout()
-    {
-        $this->layout = 'list';
-    }
-    public function grid_layout()
-    {
-        $this->layout = 'grid';
-    }
+    public $loading ;
 
-    public function detail($id)
-    {
-        $this->fileData = Content::find($id);
+    protected $rules = [
+        'file' => 'required',
+        'cooment' => 'required',
+    ];
 
+    public function details($id)
+    {
+        $this->fileDetail = Content::find($id)->first();
     }
     public function search()
     {
@@ -52,9 +42,9 @@ class DocumentsTable extends Component
     }
     public function uploadQuote($id)
     {
-        $this->status = 'Approved';
-
         $path = $this->file->store('documents','public');
+
+        $this->status = 1;
 
         $results = DB::table('contents')->where('id', $id)->update(
                 [
@@ -64,6 +54,7 @@ class DocumentsTable extends Component
                 ]
             );
         if($results){
+            $this->file;
             session()->flash('success', 'Quote uploaded successfully');
             return redirect()->to('/agents');
         }
@@ -76,8 +67,8 @@ class DocumentsTable extends Component
             $query->where('name', 'like', '%' . $this->searchQuery . '%')->orWhere('branch', 'like', '%' . $this->searchQuery . '%');
         }
 
-        $files = $query->paginate(10);
+        $contents = $query->paginate(10);
 
-        return view('livewire.agents.documents-table',  ['files' => $files]);
+        return view('livewire.agents.documents-table',  ['contents' => $contents]);
     }
 }

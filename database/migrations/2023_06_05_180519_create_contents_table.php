@@ -19,6 +19,9 @@ class CreateContentsTable extends Migration
             $table->string('last_name');
             $table->string('branch');
             $table->longText('file');
+            $table->longText('status')->nullable();
+            $table->string('quote')->nullable();
+            $table->string('comment')->nullable();
             $table->string('user_id');
             $table->timestamps();
         });

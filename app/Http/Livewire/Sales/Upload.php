@@ -94,6 +94,7 @@ class Upload extends Component
         $content->last_name = $this->last_name;
         $content->branch = $this->branch;
         $content->user_id = $this->sales_id;
+        $content->status = 0;
         $content->save();
 
         // Reset the input fields

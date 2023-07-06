@@ -30,6 +30,7 @@ Route::get('/sales/upload', [SalesController::class, 'upload']);
 Route::get('/sales/documents', [SalesController::class, 'document']);
 Route::get('/sales/documents/{id}', [SalesController::class, 'single']);
 Route::get('/sales/archives', [SalesController::class, 'archive']);
-Route::get('/sales/logout', [SalesController::class, 'logout']);
+Route::get('/logout', [SalesController::class, 'logout']);
 //JNGI Agents
 Route::get('/agents', [AgentController::class, 'index']);
+Route::get('/logout', [AgentController::class, 'logout']);
