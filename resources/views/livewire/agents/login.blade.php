@@ -12,7 +12,7 @@
             @endif
 
             <div class="mb-3">
-                <input class="form-control" type="email" wire:model="email" placeholder="Email Address" />
+                <input class="form-control" type="email" wire:model="email" placeholder="JNGI Email Address" />
             </div>
             <div class="mb-3">
                 <input class="form-control" type="password" wire:model="password" placeholder="Password" />

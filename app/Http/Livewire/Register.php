@@ -46,7 +46,7 @@ class Register extends Component
     }
     public function salesLoginForm()
     {
-        $this->subheading = "Sign up using your JN Group or Bank email address";
+        $this->subheading = "Sign up using your Bank email address";
         $this->salesLoginForm = true;
         $this->agentLoginForm = false;
 

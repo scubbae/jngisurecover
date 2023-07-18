@@ -28,7 +28,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" wire:model="email" class="form-control" placeholder="Valid group domain" autocomplete="off">
+                <input type="email" wire:model="email" class="form-control" placeholder="Valid JN Bank Email Address" autocomplete="off">
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
@@ -63,7 +63,7 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Email</label>
-                <input type="email" wire:model="email" class="form-control" placeholder="Valid group domain" autocomplete="off">
+                <input type="email" wire:model="email" class="form-control" placeholder="Valid JNGI Email Address" autocomplete="off">
             </div>
             <div class="mb-3">
                 <label class="form-label">Password</label>
