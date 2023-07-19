@@ -13,9 +13,10 @@
     <header class="bg-light py-5">
         <div class="container">
             <div class="text-center">
-                <img class="img-fluid" src="https://www.jngijamaica.com/wp-content/uploads/2019/07/cropped-cropped-JNGI-Logo.png" alt="logo" width="150px">
-                <h1>Document Portal</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Qui amet iure illum pariatur quo deleniti aperiam sapiente doloremque modi laboriosam.</p>
+                <img class="img-fluid mb-3 me-3" src="https://www.jnbank.com/wp-content/uploads/2021/11/0009_jnbanklogo.png" alt="logo" width="190px">
+                <img class="img-fluid mb-3" src="https://www.jngijamaica.com/wp-content/uploads/2019/07/cropped-cropped-JNGI-Logo.png" alt="logo" width="150px">
+                <h1>Auto Loan Sure Cover<br>Quote Portal</h1>
+                <p>One monthly payment for Auto Loan and Motor Insurance</p>
             </div>
         </div>
     </header>

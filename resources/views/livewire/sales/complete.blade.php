@@ -2,7 +2,6 @@
     <table class="table table-striped">
         <thead>
             <th>Client</th>
-            <th>Status</th>
             <th>Date</th>
             <th>Action</th>
         </thead>

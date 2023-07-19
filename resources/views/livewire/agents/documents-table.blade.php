@@ -33,7 +33,7 @@
                             @endif
 
                         @else
-                            <div class="h-100 d-flex align-items-center flex-column justify-content-center"><i class="bi bi-file-break" style="font-size: 5rem;"></i><p>Select an item to see the contents</p></div>
+                            {{-- <div class="h-100 d-flex align-items-center flex-column justify-content-center"><i class="bi bi-file-break" style="font-size: 5rem;"></i><p>Select an item to see the contents</p></div> --}}
                         @endif
 
                     </div>
@@ -105,9 +105,9 @@
 
                         </div>
 
+                        @if ($fileDetail->status == 1)
                         <hr>
-
-                        <a class="text-decoration-none d-block p-3 text-center hvr-reveal bg-light text-success" href="#" target="_blank">
+                        <a class="text-decoration-none d-block p-3 text-center hvr-reveal bg-light text-success" href="{{asset($fileDetail->quote)}}" target="_blank">
                             <div style="font-size: 5rem;">
                                 <svg class="bi bi-file-richtext" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                                     <path d="M7 4.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm-.861 1.542 1.33.886 1.854-1.855a.25.25 0 0 1 .289-.047l1.888.974V7.5a.5.5 0 0 1-.5.5H5a.5.5 0 0 1-.5-.5V7s1.54-1.274 1.639-1.208zM5 9a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"></path>
@@ -115,7 +115,7 @@
                                 </svg></div>
                             <p>Quote Attach</p>
                         </a>
-
+                        @endif
 
                     </div>
                     <div class="modal-footer">

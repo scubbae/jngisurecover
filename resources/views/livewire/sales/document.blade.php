@@ -2,7 +2,7 @@
     <div class="bg-white rounded p-5 border-0 mb-3 d-flex align-items-center">
         <button type="button" onclick="history.back()" class="btn btn-secondary"><i class="bi bi-arrow-left-circle-fill"></i> Back </button>
         <h5 class="ms-3">{{$files->first_name}} Documents</h5>
-        <button type="button" class="ms-auto btn btn-primary">Add File</button>
+        <button type="button" data-bs-target="#addFile" data-bs-toggle="modal" class="ms-auto btn btn-primary">Add File</button>
     </div>
 
     <div class="row">
@@ -44,5 +44,44 @@
         <button type="button" wire:click="delete" class="btn btn-danger">Delete Selected ({{count($select_id)}})</button>
     </div>
     @endif
+
+
+<!-- Modal -->
+<div wire:ignore.self class="modal fade" id="addFile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-center">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add a File</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form wire:submit.prevent="addFile">
+                <label class="form-label">Document Type</label>
+                <select class="form-select mb-3" wire:model="doctype">
+                    <option>-- Select Type ---</option>
+                    <option value="motor_form">Completed Motor Proposal Form (s) for all proposers</option>
+                    <option value="photo_id">Valid Photo ID</option>
+                    <option value="trn">TRN</option>
+                    <option value="fitness">Fitness Certificate</option>
+                    <option value="certificate">Registration Certificate</option>
+                    <option value="import">Import Entry</option>
+                    <option value="proforma_invoice">Pro-forma Invoice</option>
+                    <option value="valuation_report">Valuation report or pro-forma invoice from authorized dealership</option>
+                    <option value="claim_discount">Proof of No Claim Discount or any other discounts being requested</option>
+                    <option value="jnbank_acc_verified">Proof of JN Bank account</option>
+              </select>
+
+              <div class="mb-3">
+                <label for="fileupload" class="form-label">File upload</label>
+                <input type="file" wire:model="file" id="fileupload"  class="form-control" accept=".pdf,.jpeg,.jpg,.png">
+              </div>
+
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save File</button>
+
+            </form>
+        </div>
+      </div>
+    </div>
 
 </div>

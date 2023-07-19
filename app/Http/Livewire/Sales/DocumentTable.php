@@ -31,9 +31,6 @@ class DocumentTable extends Component
 
     public $select_id = array();
 
-
-
-
     public function list_layout()
     {
         $this->layout = 'list';

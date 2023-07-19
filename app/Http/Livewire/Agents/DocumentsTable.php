@@ -42,7 +42,7 @@ class DocumentsTable extends Component
     }
     public function uploadQuote($id)
     {
-        $path = $this->file->store('documents','public');
+        $path = $this->file->store('quotes','public');
 
         $this->status = 1;
 
