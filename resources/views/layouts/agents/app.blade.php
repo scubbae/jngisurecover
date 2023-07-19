@@ -1,4 +1,4 @@
-@if (session()->has('agents_id'))
+@if (session()->has('agent_id'))
 <!doctype html>
 <html lang="en">
   <head>

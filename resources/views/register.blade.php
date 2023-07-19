@@ -18,7 +18,7 @@
     </div>
 </header>
 <section class="py-5">
-    <div class="container col-md-3">
+    <div class="container col-md-4">
         <x-alerts />
         <livewire:register />
     </div>

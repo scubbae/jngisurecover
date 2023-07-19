@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
-use App\Models\Content;
 
 
 class SalesController extends Controller
@@ -31,7 +29,9 @@ class SalesController extends Controller
     }
     public function logout()
     {
-        session()->forget('login_id');
+        Session::forget('sales_id');
+        Session::forget('sales');
+        Session::forget('login');
         return redirect('/');
     }
 

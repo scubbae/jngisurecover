@@ -32,7 +32,9 @@
                 </div>
             </div>
         </div>
-
+        <div class="text-center mt-5">
+            <a href="/register">Register for an account</a>
+        </div>
     </section>
 
 

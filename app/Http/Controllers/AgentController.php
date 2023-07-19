@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Session;
 
 
@@ -15,7 +13,9 @@ class AgentController extends Controller
     }
     public function logout()
     {
-        session()->forget('login_id');
+        Session::forget('agent_id');
+        Session::forget('agent');
+        Session::forget('login');
         return redirect('/');
     }
 }

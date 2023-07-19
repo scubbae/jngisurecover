@@ -7,11 +7,11 @@
         <div class="row">
             <div class="col">
                 <small>Welcome</small>
-                <h3>{{session('agent')}}</h3>
+                <h3>{{session('sales')}}</h3>
                 <small>{{session('login')}}</small>
             </div>
             <div class="col-2 d-flex align-items-center justify-content-end">
-                <a href="/agent/upload" class="btn btn-outline-light">Uplaod Document</a>
+                <a href="/sales/upload" class="btn btn-outline-light">Request Quote</a>
             </div>
         </div>
     </div>
@@ -20,11 +20,13 @@
         <div class="col">
             <div class="card card-body mb-3">
                 <h5 class="mb-3">Complete Documents</h5>
-
+                @livewire('sales.complete')
             </div>
-            <div class="card card-body">
+        </div>
+        <div class="col">
+            <div class="card card-body mb-3">
                 <h5 class="mb-3">Processing</h5>
-
+                @livewire('sales.processing')
             </div>
         </div>
     </div>

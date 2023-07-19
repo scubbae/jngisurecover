@@ -26,7 +26,7 @@ class Login extends Component
         $user = DB::table('agents')->where('email', $this->email)->first();
 
         if ($user && Hash::check($this->password, $user->password)) {
-            session()->put('agents_id', $user->id);
+            session()->put('agent_id', $user->id);
             session()->put('agent', $user->first_name);
             session()->put('login', $user->updated_at);
 

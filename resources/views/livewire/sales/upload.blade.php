@@ -67,15 +67,29 @@
                     <div class="row mb-3">
                         <div class="col-md-4">
                             <label class="form-label">First Name</label>
-                            <input type="text" class="form-control form-control-sm" wire:model="first_name">
+                            <input type="text" class="form-control " wire:model="first_name">
+                            @error('first_name')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Last Name</label>
-                            <input type="text" class="form-control form-control-sm" wire:model="last_name">
+                            <input type="text" class="form-control " wire:model="last_name">
+                            @error('last_name')<span class="text-danger">{{$message}}</span>@enderror
                         </div>
                         <div class="col-md-4">
                             <label class="form-label">Branch</label>
-                            <input type="text" class="form-control form-control-sm" wire:model="branch">
+                            <select wire:model="branch" class="form-select">
+                                <option value="">Select Branch</option>
+                                <option value="Halfway Tree (JN Bank Building)">Halfway Tree (JN Bank Building)</option>
+                                <option value="	Kingston (Head Office)">Kingston (Head Office)</option>
+                                <option value="Mandeville (JN Bank Building)">Mandeville (JN Bank Building)</option>
+                                <option value="Montego Bay (JN Financial Services)">Montego Bay (JN Financial Services)</option>
+                                <option value="New Kingston">New Kingston</option>
+                                <option value="	Ocho Rios (JN Bank Building)">Ocho Rios (JN Bank Building)</option>
+                                <option value="	Port Maria">Port Maria</option>
+                                <option value="Santa Cruz">Santa Cruz</option>
+                                <option value="Savanna-La-Mar">Savanna-La-Mar</option>
+                            </select>
+                            @error('last_name')<span class="text-danger">{{$branch}}</span>@enderror
                         </div>
                     </div>
 
@@ -83,45 +97,45 @@
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label" for="motor_form">Motor Proposal Form</label>
-                                <input wire:model="motor_form" id="motor_form" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="motor_form" id="motor_form" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="photo_id">Valid Photo ID</label>
-                                <input wire:model="photo_id" id="photo_id" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="photo_id" id="photo_id" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="trn">TRN</label>
-                                <input wire:model="trn" id="trn" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="trn" id="trn" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="fitness">Fitness Certificate</label>
-                                <input wire:model="fitness" id="fitness" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="fitness" id="fitness" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="certificate">Registration Certificate</label>
-                                <input wire:model="certificate" id="certificate" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="certificate" id="certificate" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="mb-3">
                                 <label class="form-label" for="import">Import Entry (if fitness or registration certificates are not available)</label>
-                                <input wire:model="import" id="import" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="import" id="import" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="proforma_invoice">Pro-forma Invoice</label>
-                                <input wire:model="proforma_invoice" id="proforma_invoice" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="proforma_invoice" id="proforma_invoice" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="valuation_report">Valuation report</label>
-                                <input wire:model="valuation_report" id="valuation_report" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="valuation_report" id="valuation_report" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="claim_discount">Proof of No Claim</label>
-                                <input wire:model="claim_discount" id="claim_discount" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="claim_discount" id="claim_discount" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                             <div class="mb-3">
                                 <label class="form-label" for="jnbank_acc_verified">Proof of JN Bank account</label>
-                                <input wire:model="jnbank_acc_verified" id="jnbank_acc_verified" class="form-control form-control-sm" type="file" required   accept=".png,.jpg,.jpeg,.pdf">
+                                <input wire:model="jnbank_acc_verified" id="jnbank_acc_verified" class="form-control " type="file" required   accept=".png,.jpg,.jpeg,.pdf">
                             </div>
                         </div>
                     </div>
