@@ -24,7 +24,7 @@
                     @foreach (json_decode($files->file) as $key => $url )
                     <div class="col-md-2 mb-3">
 
-                        <a href="{{asset($url)}}" class="p-3 btn btn-outline-secondary position-relative d-block">
+                        <a href="{{asset($url)}}" class="p-3 btn btn-outline-secondary position-relative d-block" target="_blank">
                             <label>
                                 <input type="checkbox" class="position-absolute p" style="top:10px;left:20px;padding:30px;" wire:model="select_id" value="{{$key}}"  />
                             </label>
@@ -48,10 +48,10 @@
 
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="addFile" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-center">
+    <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Add a File</h1>
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Add File</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">

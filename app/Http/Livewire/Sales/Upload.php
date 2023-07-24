@@ -101,7 +101,7 @@ class Upload extends Component
         $this->reset();
 
         session()->flash('success', 'File(s) uploaded successfully');
-        return redirect('/sales/upload');
+        return redirect('/sales/documents');
 
     }
 

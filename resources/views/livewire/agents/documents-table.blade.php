@@ -15,7 +15,7 @@
                                 <p>Publish on: {{ \Carbon\Carbon::parse($fileDetail->updated_at)->format('F d, Y')}}3</p>
                                 <p>Status: Processing</p>
                                 <a class="btn btn-outline-primary w-100 mb-3" role="button" href="#" data-bs-toggle="modal" data-bs-target="#documentsModal">View Documents</a>
-                                <a class="btn btn-success w-100" role="button" href="#" data-bs-toggle="modal" data-bs-target="#completeProcess">Attach Quote</a>
+                                <a class="btn btn-success w-100" role="button" href="#" data-bs-toggle="modal" data-bs-target="#completeProcess">Attach Quote/Comment</a>
                             @endif
 
                             @if ($fileDetail->status == 1)

@@ -6,6 +6,8 @@ use Livewire\Component;
 use App\Models\Agents;
 use App\Models\Sales;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\validateEmail;
 
 class Register extends Component
 {
@@ -24,12 +26,24 @@ class Register extends Component
         'first_name' => 'required',
         'last_name' => 'required',
         'email' => 'required|email|unique:sales,email',
-        'password' => 'required|min:8|confirmed',
+        // 'password' => 'required|min:8|confirmed',
     ];
 
     // domains
     protected $saleDomains = ['jnbank.com','jngroup.com'];
-    protected $agentDomains = ['jngijamaica.com'];
+    protected $agentDomains = ['jngijamaica.com','jngroup.com'];
+
+    function generatePassword() {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+';
+        $password = '';
+
+        for ($i = 0; $i < 8; $i++) {
+            $randomIndex = mt_rand(0, strlen($characters) - 1);
+            $password .= $characters[$randomIndex];
+        }
+
+        return $password;
+    }
 
     public function agentLoginForm()
     {
@@ -61,6 +75,9 @@ class Register extends Component
     {
         $this->validate();
 
+        $this->password = $this->generatePassword();
+
+
         // check if email domain valid
         $emailDomain = explode('@', $this->email)[1];
 
@@ -78,19 +95,29 @@ class Register extends Component
         $new_user->password = Hash::make($this->password);
         $new_user->save();
 
+        $form = [
+            'name' => $this->first_name,
+            'email' => $this->email,
+            'password' => $this->password,
+        ];
+
+        Mail::to($new_user->email)->send( new validateEmail($form));
+
         $this->first_name = '';
         $this->last_name = '';
         $this->email = '';
         $this->password = '';
         $this->password_confirmation = '';
 
-        session()->flash('success', 'Registered successfully please login.');
-        return redirect()->to('/');
+        session()->flash('success', 'Registered successfully please check your email.');
+        return redirect()->to('/register');
     }
 
     public function agentSignup()
     {
         $this->validate();
+
+        $this->password = $this->generatePassword();
 
         // check if email domain valid
         $emailDomain = explode('@', $this->email)[1];
@@ -109,13 +136,21 @@ class Register extends Component
         $new_user->password = Hash::make($this->password);
         $new_user->save();
 
+        $form = [
+            'name' => $this->first_name,
+            'email' => $this->email,
+            'password' => $this->password,
+        ];
+
+        Mail::to($this->email)->send(new validateEmail($form));
+
         $this->first_name = '';
         $this->last_name = '';
         $this->email = '';
         $this->password = '';
         $this->password_confirmation = '';
 
-        session()->flash('success', 'Registered successfully please login.');
+        session()->flash('success', 'Registered successfully please check your email.');
         return redirect()->to('/');
     }
 

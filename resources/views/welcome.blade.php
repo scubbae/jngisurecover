@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <header class="bg-light py-5">
+    <header class="bg-light pt-5 pb-3">
         <div class="container">
             <div class="text-center">
                 <img class="img-fluid mb-3 me-3" src="https://www.jnbank.com/wp-content/uploads/2021/11/0009_jnbanklogo.png" alt="logo" width="190px">
@@ -24,6 +24,9 @@
     <section class="py-5">
 
         <div class="container col-md-6">
+
+            <x-alerts />
+
             <div class="row">
                 <div class="col">
                     <livewire:sales.login />
@@ -33,8 +36,11 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5">
-            <a href="/register">Register for an account</a>
+        <div class="d-flex justify-content-center mt-5">
+            <nav class="nav">
+                <a class="nav-link" href="/register">Register</a>
+                <a class="nav-link" href="#">Reset password</a>
+            </nav>
         </div>
     </section>
 

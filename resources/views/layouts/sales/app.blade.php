@@ -21,7 +21,7 @@
          <header class="py-2">
             <nav class="navbar bg-body-tertiary">
               <div class="container-fluid">
-                <a class="navbar-brand">Document Portal</a>
+                <a class="navbar-brand">Quote Portal</a>
 
                 <x-top-nav />
 

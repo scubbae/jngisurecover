@@ -30,14 +30,14 @@
                 <label class="form-label">Email</label>
                 <input type="email" wire:model="email" class="form-control" placeholder="Valid JN Bank Email Address" autocomplete="off">
             </div>
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label class="form-label">Password</label>
                 <input type="password" wire:model="password" class="form-control" placeholder="Strong password encorage" autocomplete="off">
             </div>
             <div class="mb-3">
                 <label class="form-label">Confirm Password</label>
                 <input type="password" wire:model="password_confirmation" class="form-control" placeholder="Retype password">
-            </div>
+            </div> --}}
             <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
         </div>
@@ -65,14 +65,14 @@
                 <label class="form-label">Email</label>
                 <input type="email" wire:model="email" class="form-control" placeholder="Valid JNGI Email Address" autocomplete="off">
             </div>
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label class="form-label">Password</label>
                 <input type="password" wire:model="password" class="form-control" placeholder="Strong password encorage" autocomplete="off">
             </div>
             <div class="mb-3">
                 <label class="form-label">Confirm Password</label>
                 <input type="password" wire:model="password_confirmation" class="form-control" placeholder="Retype password">
-            </div>
+            </div> --}}
             <button type="submit" class="btn btn-primary w-100">Submit</button>
         </form>
         </div>
