@@ -1,8 +1,8 @@
 <div>
     <div class="bg-white rounded p-5 border-0 mb-3 d-flex align-items-center">
-        <button type="button" onclick="history.back()" class="btn btn-secondary"><i class="bi bi-arrow-left-circle-fill"></i> Back </button>
-        <h5 class="ms-3">{{$files->first_name}} Documents</h5>
-        <button type="button" data-bs-target="#addFile" data-bs-toggle="modal" class="ms-auto btn btn-primary">Add File</button>
+        <button type="button" onclick="history.back()" class="btn btn-primary"><i class="bi bi-arrow-left-circle-fill"></i> Back </button>
+            <span class="ms-3 h1 mb-0">{{$files->first_name}} Documents</span>
+        <button type="button" data-bs-target="#addFile" data-bs-toggle="modal" class="ms-auto btn btn-info">Add File</button>
     </div>
 
     <div class="row">
@@ -12,9 +12,9 @@
                 <h2>{{$files->first_name}} {{$files->last_name}}</h2>
                 <p>Publish on {{ \Carbon\Carbon::parse($files->updated_at)->format('F d, Y') }}</p>
 
-                <div class="border bg-warning p-3 rounded">
+                <div class="text-warning">
                     <i class="bi bi-hourglass-split"></i>
-                    Proccessing
+                    Quote requested
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
               </div>
 
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
-              <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save File</button>
+              <button type="submit" class="btn btn-info" data-bs-dismiss="modal">Save File</button>
 
             </form>
         </div>

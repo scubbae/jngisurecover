@@ -7,7 +7,7 @@
                 <div class="col">
                     <div class="input-group mb-5">
                         <input type="text" class="form-control" placeholder="Search files here..." wire:model="searchInput" />
-                        <button class="btn btn-primary" wire:click="search">GO</button>
+                        <button class="btn btn-info" wire:click="search">GO</button>
                     </div>
                 </div>
                 <div class="col">

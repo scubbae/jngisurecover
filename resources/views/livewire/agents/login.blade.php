@@ -23,7 +23,7 @@
                 Remember me
               </label>
             </div>
-            <input class="btn btn-primary w-100" type="submit" value="Login" />
+            <input class="btn btn-info w-100" type="submit" value="Login" />
         </form>
     </div>
 </div>

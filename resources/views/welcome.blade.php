@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css" />
     @livewireStyles
   </head>
   <body>
 
-    <header class="bg-light pt-5 pb-3">
+    <header class="bg-light pt-5">
         <div class="container">
             <div class="text-center">
                 <img class="img-fluid mb-3 me-3" src="https://www.jnbank.com/wp-content/uploads/2021/11/0009_jnbanklogo.png" alt="logo" width="190px">
@@ -23,7 +24,7 @@
 
     <section class="py-5">
 
-        <div class="container col-md-6">
+        <div class="container">
 
             <x-alerts />
 
@@ -45,9 +46,6 @@
     </section>
 
 
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @livewireScripts
   </body>
 </html>

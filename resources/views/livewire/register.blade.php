@@ -1,5 +1,5 @@
 <div>
-   <div class="card p-3 border-0 shadow" style="overflow:hidden;">
+   <div class="card p-3" style="overflow:hidden;">
         <div class="text-center">
             <h2>Sign up</h2>
             <p>{{ $subheading }}</p>
@@ -38,7 +38,7 @@
                 <label class="form-label">Confirm Password</label>
                 <input type="password" wire:model="password_confirmation" class="form-control" placeholder="Retype password">
             </div> --}}
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button type="submit" class="btn btn-info w-100">Submit</button>
         </form>
         </div>
         @endif
@@ -73,7 +73,7 @@
                 <label class="form-label">Confirm Password</label>
                 <input type="password" wire:model="password_confirmation" class="form-control" placeholder="Retype password">
             </div> --}}
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+            <button type="submit" class="btn btn-info w-100">Submit</button>
         </form>
         </div>
         @endif

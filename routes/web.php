@@ -24,6 +24,10 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/password-reset', function () {
+    return view('password-reset');
+});
+
 //Sales team
 Route::get('/sales', [SalesController::class, 'index']);
 Route::get('/sales/upload', [SalesController::class, 'upload']);

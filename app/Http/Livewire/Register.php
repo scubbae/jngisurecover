@@ -22,13 +22,6 @@ class Register extends Component
     public $subheading = "Sign up using your JN Group or Bank email address";
 
 
-    protected $rules = [
-        'first_name' => 'required',
-        'last_name' => 'required',
-        'email' => 'required|email|unique:sales,email',
-        // 'password' => 'required|min:8|confirmed',
-    ];
-
     // domains
     protected $saleDomains = ['jnbank.com','jngroup.com'];
     protected $agentDomains = ['jngijamaica.com','jngroup.com'];
@@ -73,7 +66,12 @@ class Register extends Component
 
     public function salesSignup()
     {
-        $this->validate();
+        $this->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email|unique:sales,email',
+            // 'password' => 'required|min:8|confirmed',
+        ]);
 
         $this->password = $this->generatePassword();
 
@@ -115,7 +113,12 @@ class Register extends Component
 
     public function agentSignup()
     {
-        $this->validate();
+        $this->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email|unique:agents,email',
+            // 'password' => 'required|min:8|confirmed',
+        ]);
 
         $this->password = $this->generatePassword();
 

@@ -2,13 +2,16 @@
 
 namespace App\Http\Livewire\Sales;
 
-
+use App\Mail\notification;
+use App\Models\activitylog;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\DB;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Content;
+use App\Models\Sales;
+use Illuminate\Support\Facades\Mail;
 
 class Upload extends Component
 {
@@ -96,6 +99,27 @@ class Upload extends Component
         $content->user_id = $this->sales_id;
         $content->status = 0;
         $content->save();
+
+        //log actions
+        $user = Sales::find($this->sales_id);
+        $log = new activitylog;
+
+        $client_name = $this->first_name.' '.$this->last_name;
+        $agent_name = $user->first_name.' '.$user->last_name;
+
+        $log->sales_id = $user->id;
+        $log->sales_log = $agent_name;
+        $log->client_name = $client_name;
+        $log->save();
+
+        //email notification
+        $form = [
+            'client' => $client_name,
+            'agent_name' => $agent_name,
+            'email' => $user->email,
+        ];
+
+        Mail::to('jerrye@jngroup.com')->send(new notification($form));
 
         // Reset the input fields
         $this->reset();
