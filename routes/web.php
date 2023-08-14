@@ -28,6 +28,10 @@ Route::get('/password-reset', function () {
     return view('password-reset');
 });
 
+Route::get('/new-password/{email}/{token}', function () {
+    return view('new-password');
+});
+
 //Sales team
 Route::get('/sales', [SalesController::class, 'index']);
 Route::get('/sales/upload', [SalesController::class, 'upload']);

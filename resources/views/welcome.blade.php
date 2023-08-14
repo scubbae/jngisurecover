@@ -40,7 +40,7 @@
         <div class="d-flex justify-content-center mt-5">
             <nav class="nav">
                 <a class="nav-link" href="/register">Register</a>
-                <a class="nav-link" href="#">Reset password</a>
+                <a class="nav-link" href="/password-reset">Reset password</a>
             </nav>
         </div>
     </section>

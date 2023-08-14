@@ -11,7 +11,8 @@
   <body>
 <section class="py-5 vh-100 d-flex align-items-center">
     <div class="container col-md-4">
-        <livewire:passwordreset />
+        <x-alerts />
+        <livewire:new-password />
     </div>
 </section>
 
