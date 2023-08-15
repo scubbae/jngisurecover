@@ -22,7 +22,7 @@ class CreateContentsTable extends Migration
             $table->longText('status')->nullable();
             $table->string('quote')->nullable();
             $table->string('comment')->nullable();
-            $table->foreign('user_id')->references('id')->on('sales');
+            $table->string('user_id')->nullable();
             $table->timestamps();
         });
     }
