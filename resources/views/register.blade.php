@@ -1,15 +1,8 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome</title>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css" />
-    @livewireStyles
-  </head>
-  <body>
+@extends('layouts.blank')
+@section('title', 'Register')
+
+@section('content')
+
 <header class="bg-light pt-5 pb-3">
     <div class="container">
         <div class="text-center">
@@ -28,13 +21,9 @@
     <div class="d-flex justify-content-center mt-5">
         <nav class="nav">
             <a class="nav-link" href="/">Login</a>
-            <a class="nav-link" href="#">Reset password</a>
+            <a class="nav-link" href="/password-reset">Reset password</a>
         </nav>
     </div>
 </section>
 
-    @livewireScripts
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
-</html>
+@endsection
