@@ -10,7 +10,11 @@ use Illuminate\Queue\SerializesModels;
 class PasswordResetMail extends Mailable
 {
     use Queueable, SerializesModels;
+
     public $form;
+    
+    public $token;
+    public $email;
 
     /**
      * Create a new message instance.
@@ -19,7 +23,8 @@ class PasswordResetMail extends Mailable
      */
     public function __construct($form)
     {
-        $this->form = $form;
+        $this->email = $form['email'];
+        $this->token = $form['token'];
     }
 
     /**

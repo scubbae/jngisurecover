@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\PasswordReset;
 use App\Http\Controllers\Controller;
 
 /*
@@ -24,13 +25,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/password-reset', function () {
-    return view('password-reset');
-});
-
-Route::get('/new-password/{email}/{token}', function () {
-    return view('new-password');
-});
 
 //Sales team
 Route::get('/sales', [SalesController::class, 'index']);
@@ -42,3 +36,6 @@ Route::get('/logout', [SalesController::class, 'logout']);
 //JNGI Agents
 Route::get('/agents', [AgentController::class, 'index']);
 Route::get('/logout', [AgentController::class, 'logout']);
+
+Route::get('/password-reset', [PasswordReset::class, 'reset']);
+Route::get('/new-password/{email}/{token}', [PasswordReset::class, 'setpassword'])->name('new-password');

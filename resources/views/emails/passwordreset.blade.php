@@ -7,12 +7,7 @@
 </head>
 <body>
     <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-        <p>Please see your info below, to reset your password</p>
-        <br>
-        <br>
-        <p>{{$form['email']}}</p>
-        <p>{{$form['token']}}</p>
-        <br>
+        <p>Please click button below, to reset your password</p>
         <br>
         <p><a href="{{ route('/new-password', ['email' => $email, 'token' => $token]) }}" style="padding: 10px 15px;background:#2C4484;color:#fff;">Reset Password</a></p>
         <br>

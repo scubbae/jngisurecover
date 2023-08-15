@@ -2,6 +2,7 @@
     <div class="py-5">
         
         <div class="p-3 rounded shadow-sm mx-auto" style="max-width: 450px;">
+            <h4 class="text-center mb-3">New Passsword</h4>
             <x-alerts />
             <form wire:submit.prevent="resetPassword">
                 <input class="form-control mb-3" type="text" wire:model="email" placeholder="Enter your email" readonly>

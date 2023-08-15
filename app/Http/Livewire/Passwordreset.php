@@ -16,7 +16,6 @@ class Passwordreset extends Component
         'email'=> 'required|email'
     ];
 
-
     public function resetPassword()
     {
         $this->validate();
@@ -39,15 +38,13 @@ class Passwordreset extends Component
                     'token' => $token,
                     'created_at' => now()
                 ]);
+              
+                $form = [
+                    'email' => $this->email,
+                    'token' => $token,
+                ];
 
-                dd($this->email , $token);
-                
-                // $form = [
-                //     'email' => $this->email,
-                //     'token' => $token,
-                // ];
-
-                // Mail::to($this->email)->send(new PasswordResetMail($form));
+                Mail::to($this->email)->send(new PasswordResetMail($form));
 
                 $this->email = ' ';
 
