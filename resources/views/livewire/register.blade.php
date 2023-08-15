@@ -5,8 +5,8 @@
             <p>{{ $subheading }}</p>
         </div>
         <ul class="nav nav-tabs">
-            <li class="nav-item"><a href="#" class="nav-link @if($this->salesLoginForm) active @endif" wire:click="salesLoginForm">Sales</a></li>
-            <li class="nav-item"><a href="#" class="nav-link @if($this->agentLoginForm) active @endif" wire:click="agentLoginForm">Agents</a></li>
+            <li class="nav-item col-4"><a href="#" class="nav-link @if($this->salesLoginForm) active @endif" wire:click="salesLoginForm">Sales</a></li>
+            <li class="nav-item col-4"><a href="#" class="nav-link @if($this->agentLoginForm) active @endif" wire:click="agentLoginForm">Agents</a></li>
         </ul>
         @if($this->salesLoginForm)
         <div class="p-3">

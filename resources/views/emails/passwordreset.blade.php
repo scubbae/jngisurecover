@@ -9,7 +9,7 @@
     <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
         <p>Please click button below, to reset your password</p>
         <br>
-        <p><a href="{{ route('/new-password', ['email' => $email, 'token' => $token]) }}" style="padding: 10px 15px;background:#2C4484;color:#fff;">Reset Password</a></p>
+        <p><a href="{{ route('new-password', ['email' => $email, 'token' => $token]) }}" style="padding: 10px 15px;background:#2C4484;color:#fff;">Reset Password</a></p>
         <br>
         <p>If you did not request a password reset, please ignore this email or contact admin.</p>
   </div>

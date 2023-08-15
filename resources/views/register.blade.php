@@ -18,7 +18,7 @@
         <x-alerts />
         <livewire:register />
     </div>
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-3">
         <nav class="nav">
             <a class="nav-link" href="/">Login</a>
             <a class="nav-link" href="/password-reset">Reset password</a>
